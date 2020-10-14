@@ -33,6 +33,6 @@ php artisan key:generate
 To quickly fill the table with fake data, use this command:
 
 ```sh
-php artisan generate:url {int}
+php artisan generate:url int
 ```
 where {int} is an integer value number of links
