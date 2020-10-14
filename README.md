@@ -27,7 +27,8 @@ php artisan key:generate
 ```
 5.Insert key in .env
 
-##Commands
+
+###Commands
 
 To quickly fill the table with data, use the command:
 
