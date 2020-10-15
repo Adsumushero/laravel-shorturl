@@ -19,7 +19,7 @@ $ git clone git@github.com:Adsumushero/laravel-shorturl.git
 ```sh
 composer install
 ```
-3.Cope env.example to env 
+3.Copy env.example to env 
 
 4.Generate app key
 ```sh
@@ -28,11 +28,11 @@ php artisan key:generate
 5.Insert key in .env
 
 
-###Commands
+### Commands
 
-To quickly fill the table with data, use the command:
+To quickly fill the table with fake data, use this command:
 
 ```sh
-php artisan generate:url {int}
+php artisan generate:url int
 ```
 where {int} is an integer value number of links
