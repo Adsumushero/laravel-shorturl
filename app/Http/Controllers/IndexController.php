@@ -57,6 +57,11 @@ class IndexController extends Controller
     public function redirect($sShortUrl) {
 
         $obItem = ShortenerUrl::getByShortUrl($sShortUrl);
-        return redirect($obItem->url);
+
+        if(!empty($obItem)) {
+            return redirect($obItem->url);
+        } else {
+            return abort(404);
+        }
     }
 }

@@ -29,9 +29,12 @@ class ShortenerUrl extends Model
      */
     static public function getByShortUrl(string $sData) {
 
-        $obItem = ShortenerUrl::where('short_url', $sData)->first();
-        $obItem->increment('conversion');
-        $obItem->save();
+        $obItem = self::where('short_url', $sData)->first();
+
+        if (!empty($obItem)) {
+            $obItem->increment('conversion');
+            $obItem->save();
+        }
 
         return $obItem;
     }
