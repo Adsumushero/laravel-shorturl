@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Models\ShortenerUrl;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Pagination\Paginator;
 use Tests\TestCase;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Event;
@@ -33,6 +34,7 @@ class ShortenerUrlTest extends TestCase
         $count = random_int(1,100);
         $test = $this -> urls -> getUrlsWithPagination($count);
         $this -> assertIsObject($test);
+        $this -> assertInstanceOf(Paginator::class, $test);
     }
 
     /**
